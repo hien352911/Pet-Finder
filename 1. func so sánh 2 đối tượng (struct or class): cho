@@ -1,14 +1,26 @@
-1. func so sánh 2 đối tượng (struct or class): cho object đó adopt Equatable
+Hướng dẫn sử dụng protocol UIAppearence của UIView(super class and sub class) một cách linh hoạt
+1. UIAppearance là 1 protocol
+2. func so sánh 2 đối tượng (struct or class): cho object đó adopt Equatable
 extension Pet: Equatable {
-
+	// Override của Equatable
   static func == (lhs: Pet, rhs: Pet) -> Bool {
     return lhs.name == rhs.name && lhs.type == rhs.type
   }
 }
-2. Đổi màu navigation item và tabbar item:
+3. Đổi màu navigation item và tabbar item:
 - UIApplication.shared.delegate?.window??.tintColor = 
-3. Set background image cho navigationBar:
+4. Set background image cho navigationBar:
 - UINavigationBar.appearance().setBackgroundImage(UIImage?, for: .default)
-4. Customize backIndicatorImage phải có cả backIndicatorTransitionMaskImage mặc dù backIndicatorTransitionMaskImage là có cũng như ko (nên cho background 1 màu là được)
+5. Customize backIndicatorImage phải có cả backIndicatorTransitionMaskImage mặc dù backIndicatorTransitionMaskImage là có cũng như ko (nên cho background 1 màu là được)
+6. UIStepper
+7. forEach
 
-Đang ở Customizing a Segmented Control
+Eg: 
+- UINavigationBar.appearance()
+- UITabBar.appearance()
+- UISegmentedControl.appearance()
+- UIStepper.appearance()
+- UISlider.appearance()
+- UISwitch.appearance()
+- UITableViewCell.appearance()
+..........
