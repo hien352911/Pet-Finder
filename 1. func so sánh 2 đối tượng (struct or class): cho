@@ -1,0 +1,14 @@
+1. func so sánh 2 đối tượng (struct or class): cho object đó adopt Equatable
+extension Pet: Equatable {
+
+  static func == (lhs: Pet, rhs: Pet) -> Bool {
+    return lhs.name == rhs.name && lhs.type == rhs.type
+  }
+}
+2. Đổi màu navigation item và tabbar item:
+- UIApplication.shared.delegate?.window??.tintColor = 
+3. Set background image cho navigationBar:
+- UINavigationBar.appearance().setBackgroundImage(UIImage?, for: .default)
+4. Customize backIndicatorImage phải có cả backIndicatorTransitionMaskImage mặc dù backIndicatorTransitionMaskImage là có cũng như ko (nên cho background 1 màu là được)
+
+Đang ở Customizing a Segmented Control
